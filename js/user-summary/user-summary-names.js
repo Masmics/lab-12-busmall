@@ -1,23 +1,23 @@
-// import productObject from './products-master.js';
+import productObject from './products-master.js';
 
-// class ShowName {
+class ShowName {
     
-//     constructor(product, onSelect) {
-//         this.product = product;
-//         this.onSelect = onSelect;
-//     }
-//     render() {
-//         const dom = template(this.product);
-//         const divItem = dom.querySelector('div');
-//         const product = this.product;
-//         product.views++;
+    constructor(product, onSelect) {
+        this.product = product;
+        this.onSelect = onSelect;
+    }
+    render() {
+        const dom = makeTemplate(this.product);
+        const divItem = dom.querySelector('div');
+        const product = this.product;
+        product.views++;
 
-//         divItem.addEventListener('click', () => {
-//             this.onSelect(product);
-//         });
+        divItem.addEventListener('click', () => {
+            this.onSelect(product);
+        });
               
-//         return dom;
-//     }
-// }
+        return dom;
+    }
+}
 
-// export default ShowName;
+export default ShowName;

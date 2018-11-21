@@ -1,5 +1,5 @@
-import App from './user-summary-app.js';
+import SummaryApp from './user-summary-app.js';
 
-const app = new App();
+const app = new SummaryApp();
 const root = document.getElementById('root');
 root.appendChild(app.render());
